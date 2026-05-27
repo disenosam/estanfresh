@@ -1,1318 +1,852 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Es Tan Fresh — Wellness Editorial</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>LOTUS — Celebrity Wellness</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --forest:   #1C3025;
-    --sage:     #3D5C45;
-    --moss:     #6B8F71;
-    --fern:     #A4BFA8;
-    --mist:     #D6E5D8;
-    --cream:    #F5F0E8;
-    --parchment:#EDE8DC;
-    --linen:    #FAF7F2;
-    --warm-white:#FEFCF8;
-    --ink:      #1A1F1B;
-    --stone:    #6B6B60;
-    --gold:     #C9A96E;
-    --lotus:    #D4748A;
-    --lotus-light: #F2C4CE;
-    --lotus-pale:  #FBF0F2;
-  }
-
-  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    background: var(--warm-white);
-    font-family: 'Jost', sans-serif;
-    font-weight: 300;
-    color: var(--ink);
-    overflow-x: hidden;
-  }
-
-  /* ===== TOP STRIP ===== */
-  .top-strip {
-    background: var(--forest);
-    color: var(--mist);
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    text-align: center;
-    padding: 10px 20px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  .strip-inner {
-    display: inline-block;
-    animation: marquee 22s linear infinite;
-  }
-
-  @keyframes marquee {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-
-  /* ===== HEADER ===== */
-  header {
-    border-bottom: 1px solid var(--mist);
-    background: var(--warm-white);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-
-  .header-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 48px;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-    min-height: 72px;
-  }
-
-  .header-left {
-    font-size: 11px;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: var(--stone);
-    font-weight: 400;
-  }
-
-  .logo {
-    text-align: center;
-  }
-
-  .logo-main {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--forest);
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    display: block;
-    line-height: 1;
-  }
-
-  .logo-tagline {
-    font-family: 'Jost', sans-serif;
-    font-size: 9px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--moss);
-    font-weight: 400;
-    margin-top: 3px;
-  }
-
-  .header-right {
-    text-align: right;
-  }
-
-  .header-cta {
-    font-size: 11px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--forest);
-    text-decoration: none;
-    border-bottom: 1px solid var(--forest);
-    padding-bottom: 1px;
-    font-weight: 400;
-    transition: color 0.2s, border-color 0.2s;
-  }
-
-  .header-cta:hover { color: var(--lotus); border-color: var(--lotus); }
-
-  /* ===== NAV ===== */
-  nav {
-    background: var(--cream);
-    border-bottom: 1px solid var(--mist);
-  }
-
-  .nav-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 48px;
-    display: flex;
-    justify-content: center;
-    gap: 48px;
-  }
-
-  nav a {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--stone);
-    text-decoration: none;
-    padding: 16px 0;
-    display: block;
-    position: relative;
-    transition: color 0.2s;
-  }
-
-  nav a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--lotus), var(--sage));
-    transform: scaleX(0);
-    transition: transform 0.3s;
-  }
-
-  nav a:hover { color: var(--forest); }
-  nav a:hover::after { transform: scaleX(1); }
-
-  /* ===== HERO ===== */
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 88vh;
-    max-height: 960px;
-  }
-
-  .hero-visual {
-    background: var(--forest);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-  }
-
-  .hero-bg-pattern {
-    position: absolute;
-    inset: 0;
-    background-image:
-      radial-gradient(ellipse at 30% 60%, rgba(107,143,113,0.35) 0%, transparent 55%),
-      radial-gradient(ellipse at 70% 20%, rgba(61,92,69,0.4) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 85%, rgba(212,116,138,0.18) 0%, transparent 40%);
-  }
-
-  .hero-botanical {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.08;
-  }
-
-  .hero-botanical svg {
-    width: 75%;
-    height: 75%;
-  }
-
-  .hero-caption {
-    padding: 48px;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-caption-label {
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--fern);
-    font-weight: 400;
-    margin-bottom: 12px;
-  }
-
-  .hero-caption-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 14px;
-    color: var(--mist);
-    font-style: italic;
-    font-weight: 300;
-    line-height: 1.6;
-    max-width: 260px;
-  }
-
-  .hero-content {
-    background: linear-gradient(160deg, var(--linen) 70%, var(--lotus-pale) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 80px 72px 80px 80px;
-    position: relative;
-  }
-
-  .hero-content::before {
-    content: '';
-    position: absolute;
-    top: 64px; bottom: 64px;
-    left: 0;
-    width: 1px;
-    background: linear-gradient(180deg, transparent, var(--lotus-light) 20%, var(--mist) 80%, transparent);
-  }
-
-  .hero-issue {
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--lotus);
-    font-weight: 400;
-    margin-bottom: 28px;
-  }
-
-  .hero-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(38px, 4.5vw, 68px);
-    font-weight: 300;
-    line-height: 1.05;
-    color: var(--forest);
-    margin-bottom: 28px;
-    letter-spacing: -0.5px;
-  }
-
-  .hero-headline em {
-    font-style: italic;
-    color: var(--sage);
-  }
-
-  .hero-body {
-    font-size: 16px;
-    line-height: 1.8;
-    color: var(--stone);
-    max-width: 380px;
-    margin-bottom: 44px;
-    font-weight: 300;
-  }
-
-  .hero-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--warm-white);
-    background: var(--forest);
-    text-decoration: none;
-    padding: 16px 36px;
-    transition: all 0.3s;
-    align-self: flex-start;
-  }
-
-  .hero-btn:hover {
-    background: var(--sage);
-    gap: 20px;
-  }
-
-  .hero-btn-line {
-    width: 24px;
-    height: 1px;
-    background: var(--fern);
-    transition: width 0.3s;
-  }
-
-  .hero-btn:hover .hero-btn-line { width: 36px; }
-
-  /* ===== SECTION HEADER ===== */
-  .section-header {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 48px 40px;
-    display: flex;
-    align-items: baseline;
-    gap: 28px;
-  }
-
-  .section-label {
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--lotus);
-    font-weight: 400;
-    white-space: nowrap;
-  }
-
-  .section-title-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 3.5vw, 46px);
-    font-weight: 300;
-    color: var(--forest);
-    line-height: 1.1;
-  }
-
-  .section-title-text em { font-style: italic; }
-
-  .section-rule {
-    flex: 1;
-    height: 1px;
-    background: var(--mist);
-    margin-left: 12px;
-    margin-bottom: 8px;
-  }
-
-  /* ===== ARTÍCULOS GRID ===== */
-  .articles-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 48px 80px;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 2px;
-  }
-
-  .article-card {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    background: var(--cream);
-  }
-
-  .article-card.featured {
-    grid-row: 1 / 3;
-  }
-
-  .article-thumb {
-    aspect-ratio: 3/4;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .article-card:not(.featured) .article-thumb {
-    aspect-ratio: 4/3;
-  }
-
-  .thumb-bg {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.6s ease;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .article-card:hover .thumb-bg { transform: scale(1.04); }
-
-  .bg-forest-deep  { background: linear-gradient(160deg, #1C3025 0%, #2F4A36 100%); }
-  .bg-sage-warm    { background: linear-gradient(160deg, #3D5C45 0%, #5A7A60 100%); }
-  .bg-cream-warm   { background: linear-gradient(160deg, #EDE8DC 0%, #DDD5C2 100%); }
-  .bg-moss-light   { background: linear-gradient(160deg, #D6E5D8 0%, #B8D1BC 100%); }
-  .bg-parchment    { background: linear-gradient(160deg, #E8E0D0 0%, #D5CDB8 100%); }
-  .bg-fern         { background: linear-gradient(160deg, #6B8F71 0%, #8FAD95 100%); }
-
-  .thumb-motif {
-    font-size: 80px;
-    opacity: 0.18;
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-  }
-
-  .thumb-icon {
-    font-size: 48px;
-    position: relative;
-    z-index: 1;
-  }
-
-  .article-tag-overlay {
-    position: absolute;
-    top: 18px;
-    left: 18px;
-    font-size: 9px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 500;
-    padding: 5px 12px;
-    z-index: 2;
-  }
-
-  .tag-light { background: rgba(250,247,242,0.9); color: var(--forest); }
-  .tag-dark  { background: rgba(28,48,37,0.85); color: var(--fern); }
-
-  .article-body {
-    padding: 24px 24px 28px;
-  }
-
-  .article-category {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--lotus);
-    font-weight: 400;
-    margin-bottom: 10px;
-  }
-
-  .article-title {
-    font-family: 'Cormorant Garamond', serif;
-    color: var(--forest);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 10px;
-  }
-
-  .article-card.featured .article-title {
-    font-size: 28px;
-  }
-
-  .article-card:not(.featured) .article-title {
-    font-size: 20px;
-  }
-
-  .article-excerpt {
-    font-size: 14px;
-    color: var(--stone);
-    line-height: 1.7;
-    font-weight: 300;
-    margin-bottom: 18px;
-  }
-
-  .article-card:not(.featured) .article-excerpt { display: none; }
-
-  .article-link {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--sage);
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: gap 0.3s, color 0.3s;
-  }
-
-  .article-link::after {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 1px;
-    background: currentColor;
-    transition: width 0.3s;
-  }
-
-  .article-link:hover { color: var(--lotus); gap: 14px; }
-  .article-link:hover::after { width: 28px; }
-
-  /* ===== RETAS ===== */
-  .retas-wrap {
-    background: var(--forest);
-    padding: 80px 0;
-  }
-
-  .retas-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 48px;
-  }
-
-  .retas-header {
-    display: flex;
-    align-items: baseline;
-    gap: 28px;
-    margin-bottom: 52px;
-  }
-
-  .retas-label {
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 400;
-    white-space: nowrap;
-  }
-
-  .retas-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 3.5vw, 46px);
-    font-weight: 300;
-    color: var(--warm-white);
-    line-height: 1.1;
-  }
-
-  .retas-title em { font-style: italic; color: var(--fern); }
-
-  .retas-rule {
-    flex: 1;
-    height: 1px;
-    background: rgba(255,255,255,0.1);
-    margin-left: 12px;
-    margin-bottom: 8px;
-  }
-
-  .retas-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 2px;
-  }
-
-  .reta-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.07);
-    padding: 36px 28px 32px;
-    transition: background 0.3s;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .reta-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--lotus), var(--moss), var(--gold));
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s;
-  }
-
-  .reta-card:hover { background: rgba(255,255,255,0.08); }
-  .reta-card:hover::before { transform: scaleX(1); }
-
-  .reta-number {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 11px;
-    color: var(--gold);
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    font-weight: 300;
-  }
-
-  .reta-icon { font-size: 32px; margin-bottom: 16px; display: block; }
-
-  .reta-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    color: var(--warm-white);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 10px;
-  }
-
-  .reta-desc {
-    font-size: 13px;
-    color: rgba(255,255,255,0.45);
-    line-height: 1.6;
-    font-weight: 300;
-    margin-bottom: 24px;
-  }
-
-  .reta-cta {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--fern);
-    text-decoration: none;
-    font-weight: 400;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    transition: gap 0.3s, color 0.3s;
-  }
-
-  .reta-cta::after {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 1px;
-    background: currentColor;
-    transition: width 0.3s;
-  }
-
-  .reta-cta:hover { color: var(--lotus); gap: 14px; }
-  .reta-cta:hover::after { width: 24px; }
-
-  /* ===== PRODUCTOS ===== */
-  .productos-wrap {
-    background: var(--parchment);
-    padding: 80px 0;
-  }
-
-  .productos-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 48px;
-  }
-
-  .productos-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 24px;
-    margin-top: 0;
-  }
-
-  .producto-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--lotus-light), var(--lotus), var(--fern));
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-
-  .producto-card:hover::before { opacity: 1; }
-
-  .producto-card {
-    background: var(--warm-white);
-    padding: 28px 20px 24px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: 1px solid transparent;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .producto-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 48px rgba(28,48,37,0.1);
-    border-color: var(--mist);
-  }
-
-  .producto-visual {
-    width: 100px;
-    height: 100px;
-    background: var(--mist);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 44px;
-    margin-bottom: 20px;
-    transition: background 0.3s;
-  }
-
-  .producto-card:hover .producto-visual { background: var(--lotus-light); }
-
-  .producto-rating {
-    font-size: 11px;
-    color: var(--gold);
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-  }
-
-  .producto-name {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    color: var(--forest);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-bottom: 6px;
-  }
-
-  .producto-desc {
-    font-size: 12px;
-    color: var(--stone);
-    line-height: 1.5;
-    font-weight: 300;
-    margin-bottom: 16px;
-    flex: 1;
-  }
-
-  .producto-price {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 300;
-    color: var(--sage);
-    margin-bottom: 16px;
-  }
-
-  .producto-btn {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--forest);
-    text-decoration: none;
-    border: 1px solid var(--mist);
-    padding: 10px 20px;
-    font-weight: 500;
-    transition: all 0.3s;
-    width: 100%;
-  }
-
-  .producto-btn:hover {
-    background: var(--forest);
-    color: var(--warm-white);
-    border-color: var(--forest);
-  }
-
-  /* ===== NEWSLETTER ===== */
-  .newsletter-wrap {
-    padding: 100px 48px;
-    max-width: 900px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    border-top: 1px solid var(--mist);
-  }
-
-  .nl-left .nl-label {
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    color: var(--lotus);
-    font-weight: 400;
-    margin-bottom: 20px;
-    display: block;
-  }
-
-  .nl-left h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 3.5vw, 48px);
-    font-weight: 300;
-    color: var(--forest);
-    line-height: 1.1;
-    margin-bottom: 16px;
-  }
-
-  .nl-left h3 em { font-style: italic; }
-
-  .nl-left p {
-    font-size: 15px;
-    color: var(--stone);
-    line-height: 1.8;
-    font-weight: 300;
-  }
-
-  .nl-right {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .nl-input {
-    font-family: 'Jost', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--ink);
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid var(--mist);
-    padding: 14px 0;
-    outline: none;
-    transition: border-color 0.3s;
-    letter-spacing: 0.5px;
-  }
-
-  .nl-input::placeholder { color: var(--stone); }
-  .nl-input:focus { border-color: var(--lotus); }
-
-  .nl-name { margin-bottom: 6px; }
-
-  .nl-btn {
-    font-family: 'Jost', sans-serif;
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: var(--warm-white);
-    background: var(--forest);
-    border: none;
-    padding: 16px 36px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 8px;
-    align-self: flex-start;
-  }
-
-  .nl-btn:hover { background: var(--sage); }
-
-  .nl-fine {
-    font-size: 11px;
-    color: var(--stone);
-    opacity: 0.7;
-    font-weight: 300;
-    margin-top: 4px;
-  }
-
-  /* ===== FOOTER ===== */
-  footer {
-    background: var(--forest);
-    padding: 60px 48px 40px;
-  }
-
-  .footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .footer-top {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    gap: 60px;
-    padding-bottom: 48px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-    margin-bottom: 32px;
-  }
-
-  .footer-brand .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--warm-white);
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    display: block;
-  }
-
-  .footer-brand p {
-    font-size: 13px;
-    color: rgba(255,255,255,0.4);
-    line-height: 1.7;
-    font-weight: 300;
-    max-width: 220px;
-  }
-
-  .footer-col h5 {
-    font-size: 10px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--lotus-light);
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
-
-  .footer-col a {
-    display: block;
-    font-size: 14px;
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    margin-bottom: 10px;
-    font-weight: 300;
-    transition: color 0.2s;
-  }
-
-  .footer-col a:hover { color: var(--warm-white); }
-
-  .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-copy {
-    font-size: 11px;
-    color: rgba(255,255,255,0.25);
-    font-weight: 300;
-    letter-spacing: 1px;
-  }
-
-  .footer-social {
-    display: flex;
-    gap: 20px;
-  }
-
-  .footer-social a {
-    font-size: 18px;
-    text-decoration: none;
-    opacity: 0.4;
-    transition: opacity 0.2s;
-  }
-
-  .footer-social a:hover { opacity: 1; }
-
-  /* ===== FADE IN ===== */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 900px) {
-    .header-inner { padding: 0 24px; grid-template-columns: 1fr auto; }
-    .header-left, .header-right { display: none; }
-    .hero { grid-template-columns: 1fr; }
-    .hero-visual { display: none; }
-    .hero-content { padding: 60px 32px; }
-    .articles-grid { grid-template-columns: 1fr; padding: 0 24px 60px; }
-    .article-card.featured { grid-row: auto; }
-    .retas-grid { grid-template-columns: 1fr 1fr; gap: 2px; }
-    .productos-grid { grid-template-columns: 1fr 1fr; }
-    .newsletter-wrap { grid-template-columns: 1fr; gap: 40px; padding: 60px 24px; }
-    .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; padding: 0 24px 40px; }
-    nav .nav-inner { gap: 24px; padding: 0 24px; overflow-x: auto; }
-    .retas-inner, .productos-inner { padding: 0 24px; }
-    .section-header { padding: 60px 24px 32px; }
-  }
+
+:root{
+  --forest:#1C3025;
+  --sage:#556B5D;
+  --cream:#F8F4EE;
+  --linen:#FCFAF7;
+  --mist:#DDE7DD;
+  --stone:#6C6C63;
+  --gold:#C6A46B;
+  --lotus:#D48A9A;
+  --lotus-light:#F4D5DC;
+  --white:#FFFFFF;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:var(--linen);
+  color:var(--forest);
+  font-family:'Jost',sans-serif;
+  font-weight:300;
+  overflow-x:hidden;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* TOP STRIP */
+
+.top-strip{
+  background:var(--forest);
+  color:rgba(255,255,255,.75);
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  padding:12px 0;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.strip-inner{
+  display:inline-block;
+  animation:marquee 28s linear infinite;
+}
+
+@keyframes marquee{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(252,250,247,.95);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--mist);
+}
+
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  padding:22px 48px;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+}
+
+.header-left{
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--stone);
+}
+
+.logo{
+  text-align:center;
+}
+
+.logo-main{
+  display:block;
+  font-family:'Cormorant Garamond',serif;
+  font-size:34px;
+  letter-spacing:6px;
+  font-weight:600;
+  color:var(--forest);
+}
+
+.logo-tagline{
+  font-size:9px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--sage);
+  margin-top:4px;
+}
+
+.header-right{
+  text-align:right;
+}
+
+.header-btn{
+  text-decoration:none;
+  color:var(--forest);
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  border-bottom:1px solid var(--forest);
+  padding-bottom:2px;
+}
+
+/* NAV */
+
+nav{
+  background:var(--cream);
+  border-bottom:1px solid var(--mist);
+}
+
+.nav-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  gap:52px;
+  padding:0 40px;
+}
+
+nav a{
+  text-decoration:none;
+  color:var(--stone);
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  padding:18px 0;
+  position:relative;
+  transition:.3s;
+}
+
+nav a::after{
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg,var(--lotus),var(--sage));
+  transform:scaleX(0);
+  transition:.3s;
+}
+
+nav a:hover{
+  color:var(--forest);
+}
+
+nav a:hover::after{
+  transform:scaleX(1);
+}
+
+/* HERO */
+
+.hero{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  min-height:92vh;
+}
+
+.hero-left{
+  background:var(--forest);
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+  radial-gradient(circle at top left, rgba(255,255,255,.08), transparent 40%),
+  radial-gradient(circle at bottom right, rgba(212,138,154,.12), transparent 35%);
+}
+
+.hero-logo{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:.12;
+}
+
+.hero-logo svg{
+  width:70%;
+}
+
+.hero-caption{
+  position:relative;
+  z-index:2;
+  padding:50px;
+}
+
+.hero-caption span{
+  display:block;
+  color:var(--mist);
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.hero-caption p{
+  max-width:300px;
+  color:rgba(255,255,255,.75);
+  line-height:1.8;
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;
+  font-style:italic;
+}
+
+.hero-right{
+  background:linear-gradient(160deg,var(--linen) 70%, #FAEEF1 100%);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:90px;
+}
+
+.hero-issue{
+  font-size:11px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--lotus);
+  margin-bottom:28px;
+}
+
+.hero-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(44px,5vw,76px);
+  line-height:1;
+  font-weight:300;
+  margin-bottom:28px;
+}
+
+.hero-title em{
+  font-style:italic;
+  color:var(--sage);
+}
+
+.hero-body{
+  max-width:420px;
+  color:var(--stone);
+  line-height:1.9;
+  font-size:16px;
+  margin-bottom:42px;
+}
+
+.hero-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:16px;
+  background:var(--forest);
+  color:var(--white);
+  text-decoration:none;
+  padding:18px 38px;
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  align-self:flex-start;
+  transition:.3s;
+}
+
+.hero-btn:hover{
+  background:var(--sage);
+}
+
+.hero-line{
+  width:28px;
+  height:1px;
+  background:var(--mist);
+}
+
+/* SECTION */
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:100px 48px;
+}
+
+.section-header{
+  display:flex;
+  align-items:baseline;
+  gap:24px;
+  margin-bottom:60px;
+}
+
+.section-label{
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--lotus);
+}
+
+.section-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:50px;
+  font-weight:300;
+}
+
+.section-title em{
+  font-style:italic;
+}
+
+.section-line{
+  flex:1;
+  height:1px;
+  background:var(--mist);
+}
+
+/* ARTICLES */
+
+.articles{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:2px;
+}
+
+.article{
+  background:var(--cream);
+  overflow:hidden;
+}
+
+.article-featured{
+  grid-row:span 2;
+}
+
+.article-image{
+  aspect-ratio:4/3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.article-featured .article-image{
+  aspect-ratio:3/4;
+}
+
+.bg-dark{
+  background:linear-gradient(160deg,#1C3025,#314A39);
+}
+
+.bg-sage{
+  background:linear-gradient(160deg,#5E7466,#7D9586);
+}
+
+.bg-light{
+  background:linear-gradient(160deg,#E9E2D6,#DCCEBB);
+}
+
+.article-image span{
+  font-size:56px;
+}
+
+.article-body{
+  padding:28px;
+}
+
+.article-category{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--lotus);
+  margin-bottom:10px;
+}
+
+.article-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:30px;
+  line-height:1.15;
+  margin-bottom:14px;
+}
+
+.article:not(.article-featured) .article-title{
+  font-size:22px;
+}
+
+.article-text{
+  color:var(--stone);
+  line-height:1.8;
+  margin-bottom:18px;
+}
+
+.article-link{
+  text-decoration:none;
+  color:var(--sage);
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+}
+
+/* ABOUT */
+
+.about{
+  background:var(--forest);
+  padding:110px 48px;
+}
+
+.about-inner{
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+
+.about-label{
+  color:var(--gold);
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  margin-bottom:24px;
+}
+
+.about h2{
+  color:var(--white);
+  font-family:'Cormorant Garamond',serif;
+  font-size:58px;
+  font-weight:300;
+  line-height:1.1;
+  margin-bottom:28px;
+}
+
+.about p{
+  color:rgba(255,255,255,.65);
+  line-height:2;
+  font-size:16px;
+  max-width:700px;
+  margin:auto;
+}
+
+/* FOOTER */
+
+footer{
+  background:#16231C;
+  padding:50px 48px;
+}
+
+.footer-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.footer-copy{
+  color:rgba(255,255,255,.35);
+  font-size:12px;
+}
+
+.footer-social{
+  display:flex;
+  gap:18px;
+}
+
+.footer-social a{
+  color:rgba(255,255,255,.5);
+  text-decoration:none;
+  font-size:18px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.hero{
+  grid-template-columns:1fr;
+}
+
+.hero-left{
+  display:none;
+}
+
+.hero-right{
+  padding:60px 34px;
+}
+
+.header-inner{
+  grid-template-columns:1fr;
+  text-align:center;
+}
+
+.header-left,
+.header-right{
+  display:none;
+}
+
+.nav-inner{
+  gap:28px;
+  overflow:auto;
+}
+
+.articles{
+  grid-template-columns:1fr;
+}
+
+.section{
+  padding:70px 24px;
+}
+
+.about{
+  padding:80px 24px;
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
 <!-- TOP STRIP -->
+
 <div class="top-strip">
-  <span class="strip-inner">
-    Bienvenida a Es Tan Fresh &nbsp;·&nbsp; Bienestar honesto, sin postureo &nbsp;·&nbsp; Nueva reta cada semana &nbsp;·&nbsp; Editorial de wellness desde Ciudad de México &nbsp;·&nbsp; Productos que sí probamos &nbsp;·&nbsp; Glowing desde adentro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    Bienvenida a Es Tan Fresh &nbsp;·&nbsp; Bienestar honesto, sin postureo &nbsp;·&nbsp; Nueva reta cada semana &nbsp;·&nbsp; Editorial de wellness desde Ciudad de México &nbsp;·&nbsp; Productos que sí probamos &nbsp;·&nbsp; Glowing desde adentro &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  </span>
+  <div class="strip-inner">
+    Bienvenida a LOTUS · Celebrity Wellness · Dietas de famosos · Entrevistas con especialistas · Cultura wellness contemporánea · Desde Ciudad de México · Bienvenida a LOTUS · Celebrity Wellness · Dietas de famosos · Entrevistas con especialistas · Cultura wellness contemporánea · Desde Ciudad de México
+  </div>
 </div>
 
 <!-- HEADER -->
+
 <header>
-  <div class="header-inner">
-    <div class="header-left">Edición — Mayo 2025</div>
-    <div class="logo">
-      <span class="logo-main">Es Tan Fresh</span>
-      <span class="logo-tagline">Wellness · Naturaleza · Ritual</span>
-    </div>
-    <div class="header-right">
-      <a href="#newsletter" class="header-cta">Suscribirse</a>
-    </div>
-  </div>
+
+<div class="header-inner">
+
+<div class="header-left">
+Edición — Mayo 2026
+</div>
+
+<div class="logo">
+<span class="logo-main">LOTUS</span>
+<span class="logo-tagline">
+Wellness · Cultura · Nutrición
+</span>
+</div>
+
+<div class="header-right">
+<a href="#" class="header-btn">
+Suscribirse
+</a>
+</div>
+
+</div>
+
 </header>
 
 <!-- NAV -->
+
 <nav>
-  <div class="nav-inner">
-    <a href="#articulos">Artículos</a>
-    <a href="#retas">Retas</a>
-    <a href="#productos">Productos</a>
-    <a href="#">Recetas</a>
-    <a href="#">Movimiento</a>
-    <a href="#">Acerca</a>
-  </div>
+
+<div class="nav-inner">
+<a href="#">Inicio</a>
+<a href="#">Celebrity Wellness</a>
+<a href="#">Entrevistas</a>
+<a href="#">Recetas</a>
+<a href="#">Sobre Nosotros</a>
+</div>
+
 </nav>
 
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-visual">
-    <div class="hero-bg-pattern"></div>
-    <div class="hero-botanical">
-      <svg viewBox="0 0 300 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M150 380 C150 380 100 300 80 220 C60 140 90 80 150 40 C210 80 240 140 220 220 C200 300 150 380 150 380Z" stroke="white" stroke-width="1" fill="none"/>
-        <path d="M150 200 C150 200 80 180 50 140 C30 110 50 70 80 60 C110 50 140 80 150 100" stroke="white" stroke-width="0.8" fill="none"/>
-        <path d="M150 200 C150 200 220 180 250 140 C270 110 250 70 220 60 C190 50 160 80 150 100" stroke="white" stroke-width="0.8" fill="none"/>
-        <path d="M150 280 C150 280 100 260 70 230 C50 210 60 180 85 170 C110 160 140 180 150 200" stroke="white" stroke-width="0.6" fill="none"/>
-        <path d="M150 280 C150 280 200 260 230 230 C250 210 240 180 215 170 C190 160 160 180 150 200" stroke="white" stroke-width="0.6" fill="none"/>
-        <circle cx="150" cy="40" r="6" fill="white" opacity="0.6"/>
-        <circle cx="80" cy="60" r="4" fill="white" opacity="0.5"/>
-        <circle cx="220" cy="60" r="4" fill="white" opacity="0.5"/>
-        <!-- lotus petals hint -->
-        <ellipse cx="150" cy="340" rx="18" ry="28" fill="#D4748A" opacity="0.25" transform="rotate(-15 150 340)"/>
-        <ellipse cx="150" cy="340" rx="18" ry="28" fill="#D4748A" opacity="0.2" transform="rotate(15 150 340)"/>
-        <ellipse cx="150" cy="340" rx="14" ry="22" fill="#F2C4CE" opacity="0.2" transform="rotate(0 150 340)"/>
-        <circle cx="150" cy="325" r="7" fill="#D4748A" opacity="0.3"/>
-      </svg>
-    </div>
-    <div class="hero-caption">
-      <div class="hero-caption-label">Portada · Mayo 2025</div>
-      <div class="hero-caption-text">"El verdadero bienestar no se compra. Se cultiva, se practica, se regala."</div>
-    </div>
-  </div>
 
-  <div class="hero-content">
-    <div class="hero-issue">Vol. 01 &nbsp;—&nbsp; Bienvenida</div>
-    <h1 class="hero-headline">Tu mejor versión<br>está a un ritual<br><em>de distancia</em></h1>
-    <p class="hero-body">Retas semanales, productos probados con honestidad y una mirada editorial al bienestar que sí se siente auténtico. Aquí nada es postureo.</p>
-    <a href="#articulos" class="hero-btn">
-      Explorar el blog
-      <span class="hero-btn-line"></span>
-    </a>
-  </div>
+<section class="hero">
+
+<div class="hero-left">
+
+<div class="hero-overlay"></div>
+
+<div class="hero-logo">
+
+<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+<path d="M200 290C200 290 150 240 150 180C150 130 180 90 200 70C220 90 250 130 250 180C250 240 200 290 200 290Z" stroke="white" stroke-width="2"/>
+
+<path d="M200 290C200 290 95 250 85 185C78 140 105 110 135 100C170 90 195 120 200 145" stroke="white" stroke-width="1.5"/>
+
+<path d="M200 290C200 290 305 250 315 185C322 140 295 110 265 100C230 90 205 120 200 145" stroke="white" stroke-width="1.5"/>
+
+<path d="M200 305C200 305 130 285 105 255C85 232 90 205 118 195C145 185 182 205 200 230" stroke="white" stroke-width="1.2"/>
+
+<path d="M200 305C200 305 270 285 295 255C315 232 310 205 282 195C255 185 218 205 200 230" stroke="white" stroke-width="1.2"/>
+
+</svg>
+
 </div>
 
-<!-- ARTÍCULOS -->
-<div id="articulos">
-  <div class="section-header fade-in">
-    <span class="section-label">Lo más reciente</span>
-    <h2 class="section-title-text">Del blog <em>esta semana</em></h2>
-    <div class="section-rule"></div>
-  </div>
+<div class="hero-caption">
+<span>Celebrity Wellness · Mayo 2026</span>
 
-  <div class="articles-grid">
+<p>
+“La cultura wellness moderna ya no trata solo de verse bien. Trata de cómo vivimos, comemos y nos sentimos.”
+</p>
 
-    <div class="article-card featured fade-in">
-      <div class="article-thumb">
-        <div class="thumb-bg bg-forest-deep">
-          <span class="thumb-icon">🧘‍♀️</span>
-          <span class="thumb-motif">🌿</span>
-        </div>
-        <span class="article-tag-overlay tag-dark">Portada</span>
-      </div>
-      <div class="article-body">
-        <div class="article-category">Mindfulness</div>
-        <h3 class="article-title">10 minutos de meditación que sí te van a funcionar</h3>
-        <p class="article-excerpt">Sin apps ni suscripciones caras. Solo tú, tu respiración y este método que cambió mis mañanas por completo. La ciencia detrás de por qué funciona —y por qué los otros no.</p>
-        <a href="#" class="article-link">Leer artículo</a>
-      </div>
-    </div>
-
-    <div class="article-card fade-in">
-      <div class="article-thumb">
-        <div class="thumb-bg bg-sage-warm">
-          <span class="thumb-icon">🥗</span>
-          <span class="thumb-motif">🌱</span>
-        </div>
-        <span class="article-tag-overlay tag-dark">Trending</span>
-      </div>
-      <div class="article-body">
-        <div class="article-category">Nutrición</div>
-        <h3 class="article-title">Smoothies con energía real (no el hype)</h3>
-        <a href="#" class="article-link">Leer</a>
-      </div>
-    </div>
-
-    <div class="article-card fade-in">
-      <div class="article-thumb">
-        <div class="thumb-bg bg-moss-light">
-          <span class="thumb-icon">🌙</span>
-          <span class="thumb-motif">✦</span>
-        </div>
-        <span class="article-tag-overlay tag-light">Ritual</span>
-      </div>
-      <div class="article-body">
-        <div class="article-category">Sleep Wellness</div>
-        <h3 class="article-title">La rutina nocturna de 20 min que te hace despertar glowing</h3>
-        <a href="#" class="article-link">Leer</a>
-      </div>
-    </div>
-
-    <div class="article-card fade-in">
-      <div class="article-thumb">
-        <div class="thumb-bg bg-cream-warm">
-          <span class="thumb-icon">🏃‍♀️</span>
-          <span class="thumb-motif">◯</span>
-        </div>
-        <span class="article-tag-overlay tag-light">Guía</span>
-      </div>
-      <div class="article-body">
-        <div class="article-category">Fitness</div>
-        <h3 class="article-title">Cómo empecé a correr desde cero y no morí en el intento</h3>
-        <a href="#" class="article-link">Leer</a>
-      </div>
-    </div>
-
-    <div class="article-card fade-in">
-      <div class="article-thumb">
-        <div class="thumb-bg bg-parchment">
-          <span class="thumb-icon">📓</span>
-          <span class="thumb-motif">✦</span>
-        </div>
-        <span class="article-tag-overlay tag-light">Mindset</span>
-      </div>
-      <div class="article-body">
-        <div class="article-category">Journaling</div>
-        <h3 class="article-title">Prompts para las que no saben qué escribir</h3>
-        <a href="#" class="article-link">Leer</a>
-      </div>
-    </div>
-
-  </div>
 </div>
 
-<!-- RETAS -->
-<div id="retas" class="retas-wrap">
-  <div class="retas-inner">
-    <div class="retas-header fade-in">
-      <span class="retas-label">Esta semana</span>
-      <h2 class="retas-title">Retas de <em>bienestar</em></h2>
-      <div class="retas-rule"></div>
-    </div>
-
-    <div class="retas-grid">
-      <div class="reta-card fade-in">
-        <div class="reta-number">01</div>
-        <span class="reta-icon">💧</span>
-        <div class="reta-name">Hidratación Consciente</div>
-        <p class="reta-desc">8 vasos de agua al día por 7 días. Documenta tu piel al inicio y al final.</p>
-        <a href="#" class="reta-cta">Aceptar reta</a>
-      </div>
-      <div class="reta-card fade-in">
-        <div class="reta-number">02</div>
-        <span class="reta-icon">🚶‍♀️</span>
-        <div class="reta-name">10K Pasos Diarios</div>
-        <p class="reta-desc">30 días, 10,000 pasos. Sin gimnasio, sin equipo. Solo moverte más.</p>
-        <a href="#" class="reta-cta">Aceptar reta</a>
-      </div>
-      <div class="reta-card fade-in">
-        <div class="reta-number">03</div>
-        <span class="reta-icon">🥦</span>
-        <div class="reta-name">Semana Eat Clean</div>
-        <p class="reta-desc">7 días sin azúcar procesada. Más difícil de lo que parece, más satisfactoria también.</p>
-        <a href="#" class="reta-cta">Aceptar reta</a>
-      </div>
-      <div class="reta-card fade-in">
-        <div class="reta-number">04</div>
-        <span class="reta-icon">📵</span>
-        <div class="reta-name">Sin Scroll Matutino</div>
-        <p class="reta-desc">14 días sin redes sociales antes de las 10am. Sí cambia tu vida.</p>
-        <a href="#" class="reta-cta">Aceptar reta</a>
-      </div>
-      <div class="reta-card fade-in">
-        <div class="reta-number">05</div>
-        <span class="reta-icon">🧊</span>
-        <div class="reta-name">Cold Shower Challenge</div>
-        <p class="reta-desc">30 segundos de agua fría al final de la ducha. Scary al inicio, adictiva después.</p>
-        <a href="#" class="reta-cta">Aceptar reta</a>
-      </div>
-    </div>
-  </div>
 </div>
 
-<!-- PRODUCTOS -->
-<div id="productos" class="productos-wrap">
-  <div class="productos-inner">
-    <div class="section-header fade-in" style="padding-left:0; padding-right:0;">
-      <span class="section-label">Probados y aprobados</span>
-      <h2 class="section-title-text">Productos que <em>sí usamos</em></h2>
-      <div class="section-rule"></div>
-    </div>
-    <div class="productos-grid">
-      <div class="producto-card fade-in">
-        <div class="producto-visual">🫙</div>
-        <div class="producto-rating">★★★★★</div>
-        <div class="producto-name">Colágeno Marine Glow</div>
-        <div class="producto-desc">Sin sabor raro, se disuelve perfecto en café o agua tibia.</div>
-        <div class="producto-price">$420</div>
-        <a href="#" class="producto-btn">Ver producto</a>
-      </div>
-      <div class="producto-card fade-in">
-        <div class="producto-visual">🧴</div>
-        <div class="producto-rating">★★★★★</div>
-        <div class="producto-name">Sérum Vitamina C Glow</div>
-        <div class="producto-desc">Diferencia visible en 2 semanas. El que por fin sí funciona.</div>
-        <div class="producto-price">$380</div>
-        <a href="#" class="producto-btn">Ver producto</a>
-      </div>
-      <div class="producto-card fade-in">
-        <div class="producto-visual">🍵</div>
-        <div class="producto-rating">★★★★☆</div>
-        <div class="producto-name">Té Matcha Bloom</div>
-        <div class="producto-desc">Matcha ceremonial + ashwagandha. Para el estrés de verdad.</div>
-        <div class="producto-price">$290</div>
-        <a href="#" class="producto-btn">Ver producto</a>
-      </div>
-      <div class="producto-card fade-in">
-        <div class="producto-visual">🎽</div>
-        <div class="producto-rating">★★★★★</div>
-        <div class="producto-name">Set Yoga Fresh</div>
-        <div class="producto-desc">Mat + 2 blocks + correa en lavanda. El kit para empezar en serio.</div>
-        <div class="producto-price">$890</div>
-        <a href="#" class="producto-btn">Ver producto</a>
-      </div>
-      <div class="producto-card fade-in">
-        <div class="producto-visual">💊</div>
-        <div class="producto-rating">★★★★★</div>
-        <div class="producto-name">Omega 3 Ultra Pure</div>
-        <div class="producto-desc">Sin olor a pescado, certificado. El mejor que hemos probado.</div>
-        <div class="producto-price">$350</div>
-        <a href="#" class="producto-btn">Ver producto</a>
-      </div>
-    </div>
-  </div>
+<div class="hero-right">
+
+<div class="hero-issue">
+Vol. 01 — Editorial Digital
 </div>
 
-<!-- NEWSLETTER -->
-<div id="newsletter">
-  <div class="newsletter-wrap fade-in">
-    <div class="nl-left">
-      <span class="nl-label">Club Fresh</span>
-      <h3>El wellness<br>que llega a<br><em>tu inbox</em></h3>
-      <p>Cada semana: un artículo que vale la pena leer, una reta nueva y descuentos exclusivos. Sin spam, sin postureo. Solo vibras de bienestar real.</p>
-    </div>
-    <div class="nl-right">
-      <input class="nl-input nl-name" type="text" placeholder="Tu nombre" />
-      <input class="nl-input" type="email" placeholder="tucorreo@ejemplo.com" id="nlEmail" />
-      <button class="nl-btn" id="nlBtn">Unirme al club</button>
-      <span class="nl-fine">Sin spam, de nuestra parte. Cancelable cuando quieras.</span>
-    </div>
-  </div>
+<h1 class="hero-title">
+Dietas de celebridades,<br>
+entrevistas y la nueva<br>
+<em>cultura wellness</em>
+</h1>
+
+<p class="hero-body">
+Una revista digital sobre nutrición, hábitos y bienestar contemporáneo. Analizamos lo que comen las celebridades, hablamos con expertos y exploramos las tendencias que están redefiniendo el wellness moderno.
+</p>
+
+<a href="#" class="hero-btn">
+Explorar artículos
+<div class="hero-line"></div>
+</a>
+
 </div>
+
+</section>
+
+<!-- ARTICLES -->
+
+<section class="section">
+
+<div class="section-header">
+
+<div class="section-label">
+Celebrity Wellness
+</div>
+
+<h2 class="section-title">
+Dietas, hábitos y <em>rituales modernos</em>
+</h2>
+
+<div class="section-line"></div>
+
+</div>
+
+<div class="articles">
+
+<!-- FEATURED -->
+
+<div class="article article-featured">
+
+<div class="article-image bg-dark">
+<span>🥗</span>
+</div>
+
+<div class="article-body">
+
+<div class="article-category">
+Dietas de celebridades
+</div>
+
+<h3 class="article-title">
+Qué come Selena Gomez en un día — y lo que realmente dicen los expertos
+</h3>
+
+<p class="article-text">
+Analizamos entrevistas, hábitos y rutinas alimentarias junto a especialistas en nutrición y wellness contemporáneo.
+</p>
+
+<a href="#" class="article-link">
+Leer artículo
+</a>
+
+</div>
+
+</div>
+
+<!-- ARTICLE -->
+
+<div class="article">
+
+<div class="article-image bg-sage">
+<span>🍵</span>
+</div>
+
+<div class="article-body">
+
+<div class="article-category">
+Entrevistas
+</div>
+
+<h3 class="article-title">
+Nutriólogos hablan sobre la obsesión actual con la proteína
+</h3>
+
+<a href="#" class="article-link">
+Leer más
+</a>
+
+</div>
+
+</div>
+
+<!-- ARTICLE -->
+
+<div class="article">
+
+<div class="article-image bg-light">
+<span>🌿</span>
+</div>
+
+<div class="article-body">
+
+<div class="article-category">
+Recetas
+</div>
+
+<h3 class="article-title">
+El matcha latte aesthetic que realmente sabe bien
+</h3>
+
+<a href="#" class="article-link">
+Leer más
+</a>
+
+</div>
+
+</div>
+
+<!-- ARTICLE -->
+
+<div class="article">
+
+<div class="article-image bg-light">
+<span>🥑</span>
+</div>
+
+<div class="article-body">
+
+<div class="article-category">
+Celebrity Wellness
+</div>
+
+<h3 class="article-title">
+La rutina wellness de Hailey Bieber explicada por expertos
+</h3>
+
+<a href="#" class="article-link">
+Leer más
+</a>
+
+</div>
+
+</div>
+
+<!-- ARTICLE -->
+
+<div class="article">
+
+<div class="article-image bg-sage">
+<span>☕</span>
+</div>
+
+<div class="article-body">
+
+<div class="article-category">
+Cultura
+</div>
+
+<h3 class="article-title">
+Por qué el wellness se convirtió en una estética digital
+</h3>
+
+<a href="#" class="article-link">
+Leer más
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<div class="about-inner">
+
+<div class="about-label">
+Sobre Nosotros
+</div>
+
+<h2>
+Una mirada editorial<br>
+al wellness moderno
+</h2>
+
+<p>
+LOTUS es una revista digital enfocada en celebrity wellness, nutrición contemporánea y cultura del bienestar. Exploramos dietas de celebridades, entrevistamos especialistas y analizamos cómo internet, la estética y los hábitos están redefiniendo la manera en que vivimos y nos alimentamos.
+</p>
+
+</div>
+
+</section>
 
 <!-- FOOTER -->
+
 <footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="footer-logo">Es Tan Fresh</span>
-        <p>Un espacio editorial honesto sobre bienestar, movimiento y rituales que sí funcionan. Desde la Ciudad de México para el mundo.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Secciones</h5>
-        <a href="#">Artículos</a>
-        <a href="#">Retas</a>
-        <a href="#">Recetas</a>
-        <a href="#">Movimiento</a>
-      </div>
-      <div class="footer-col">
-        <h5>Nosotras</h5>
-        <a href="#">Acerca de</a>
-        <a href="#">Colabora</a>
-        <a href="#">Prensa</a>
-        <a href="#">Contacto</a>
-      </div>
-      <div class="footer-col">
-        <h5>Legal</h5>
-        <a href="#">Privacidad</a>
-        <a href="#">Términos</a>
-        <a href="#">Cookies</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 Es Tan Fresh — Ciudad de México</span>
-      <div class="footer-social">
-        <a href="#" title="Instagram">📸</a>
-        <a href="#" title="TikTok">🎵</a>
-        <a href="#" title="YouTube">▶️</a>
-        <a href="#" title="Pinterest">📌</a>
-      </div>
-    </div>
-  </div>
+
+<div class="footer-inner">
+
+<div class="footer-copy">
+© 2026 LOTUS — Ciudad de México
+</div>
+
+<div class="footer-social">
+<a href="#">📸</a>
+<a href="#">🎵</a>
+<a href="#">▶</a>
+<a href="#">📌</a>
+</div>
+
+</div>
+
 </footer>
 
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-  document.querySelectorAll('nav a, .hero-btn').forEach(a => {
-    a.addEventListener('click', e => {
-      const href = a.getAttribute('href');
-      if (href && href.startsWith('#') && href.length > 1) {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  const nlBtn = document.getElementById('nlBtn');
-  const nlEmail = document.getElementById('nlEmail');
-  nlBtn.addEventListener('click', () => {
-    if (nlEmail.value.includes('@')) {
-      nlBtn.textContent = 'Bienvenida al club ✓';
-      nlBtn.style.background = 'var(--sage)';
-      nlEmail.value = '';
-      setTimeout(() => { nlBtn.textContent = 'Unirme al club'; nlBtn.style.background = ''; }, 3500);
-    } else {
-      nlEmail.style.borderBottomColor = '#C05050';
-      setTimeout(() => nlEmail.style.borderBottomColor = '', 1500);
-    }
-  });
-</script>
 </body>
 </html>
