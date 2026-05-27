@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Es Tan Fresh — Celebrity Wellness</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -10,15 +11,15 @@
 <style>
 
 :root{
-  --forest:#1C3025;
-  --sage:#556B5D;
-  --cream:#F8F4EE;
-  --linen:#FCFAF7;
-  --mist:#DDE7DD;
-  --stone:#6C6C63;
+  --forest:#1D2A22;
+  --sage:#617565;
+  --cream:#F7F3EC;
+  --linen:#FCFAF6;
+  --mist:#DFE7DE;
+  --stone:#6A6A63;
   --gold:#C6A46B;
-  --lotus:#D48A9A;
-  --lotus-light:#F4D5DC;
+  --lotus:#D68FA0;
+  --lotus-light:#F4D9DF;
   --white:#FFFFFF;
 }
 
@@ -28,16 +29,16 @@
   box-sizing:border-box;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background:var(--linen);
   color:var(--forest);
   font-family:'Jost',sans-serif;
   font-weight:300;
   overflow-x:hidden;
-}
-
-html{
-  scroll-behavior:smooth;
 }
 
 /* TOP STRIP */
@@ -49,13 +50,13 @@ html{
   letter-spacing:3px;
   text-transform:uppercase;
   padding:12px 0;
-  overflow:hidden;
   white-space:nowrap;
+  overflow:hidden;
 }
 
 .strip-inner{
   display:inline-block;
-  animation:marquee 28s linear infinite;
+  animation:marquee 26s linear infinite;
 }
 
 @keyframes marquee{
@@ -69,7 +70,7 @@ header{
   position:sticky;
   top:0;
   z-index:100;
-  background:rgba(252,250,247,.95);
+  background:rgba(252,250,246,.96);
   backdrop-filter:blur(14px);
   border-bottom:1px solid var(--mist);
 }
@@ -77,7 +78,7 @@ header{
 .header-inner{
   max-width:1200px;
   margin:auto;
-  padding:22px 48px;
+  padding:24px 48px;
   display:grid;
   grid-template-columns:1fr auto 1fr;
   align-items:center;
@@ -104,11 +105,11 @@ header{
 }
 
 .logo-tagline{
+  margin-top:4px;
   font-size:9px;
   letter-spacing:4px;
   text-transform:uppercase;
   color:var(--sage);
-  margin-top:4px;
 }
 
 .header-right{
@@ -137,7 +138,7 @@ nav{
   margin:auto;
   display:flex;
   justify-content:center;
-  gap:52px;
+  gap:50px;
   padding:0 40px;
 }
 
@@ -192,8 +193,8 @@ nav a:hover::after{
   position:absolute;
   inset:0;
   background:
-  radial-gradient(circle at top left, rgba(255,255,255,.08), transparent 40%),
-  radial-gradient(circle at bottom right, rgba(212,138,154,.12), transparent 35%);
+  radial-gradient(circle at top left, rgba(255,255,255,.06), transparent 40%),
+  radial-gradient(circle at bottom right, rgba(214,143,160,.14), transparent 40%);
 }
 
 .hero-logo{
@@ -202,7 +203,7 @@ nav a:hover::after{
   display:flex;
   align-items:center;
   justify-content:center;
-  opacity:.12;
+  opacity:.1;
 }
 
 .hero-logo svg{
@@ -221,20 +222,20 @@ nav a:hover::after{
   font-size:10px;
   letter-spacing:4px;
   text-transform:uppercase;
-  margin-bottom:14px;
+  margin-bottom:16px;
 }
 
 .hero-caption p{
-  max-width:300px;
+  max-width:320px;
   color:rgba(255,255,255,.75);
-  line-height:1.8;
+  line-height:1.9;
   font-family:'Cormorant Garamond',serif;
-  font-size:18px;
+  font-size:19px;
   font-style:italic;
 }
 
 .hero-right{
-  background:linear-gradient(160deg,var(--linen) 70%, #FAEEF1 100%);
+  background:linear-gradient(160deg,var(--linen) 72%, #FAEEF1 100%);
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -246,20 +247,20 @@ nav a:hover::after{
   letter-spacing:4px;
   text-transform:uppercase;
   color:var(--lotus);
-  margin-bottom:28px;
+  margin-bottom:30px;
 }
 
 .hero-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(44px,5vw,76px);
+  font-size:clamp(44px,5vw,78px);
   line-height:1;
   font-weight:300;
   margin-bottom:28px;
 }
 
 .hero-title em{
-  font-style:italic;
   color:var(--sage);
+  font-style:italic;
 }
 
 .hero-body{
@@ -295,7 +296,7 @@ nav a:hover::after{
   background:var(--mist);
 }
 
-/* SECTION */
+/* SECTIONS */
 
 .section{
   max-width:1200px;
@@ -319,7 +320,7 @@ nav a:hover::after{
 
 .section-title{
   font-family:'Cormorant Garamond',serif;
-  font-size:50px;
+  font-size:52px;
   font-weight:300;
 }
 
@@ -355,8 +356,6 @@ nav a:hover::after{
   display:flex;
   align-items:center;
   justify-content:center;
-  position:relative;
-  overflow:hidden;
 }
 
 .article-featured .article-image{
@@ -364,15 +363,15 @@ nav a:hover::after{
 }
 
 .bg-dark{
-  background:linear-gradient(160deg,#1C3025,#314A39);
+  background:linear-gradient(160deg,#1D2A22,#35483C);
 }
 
 .bg-sage{
-  background:linear-gradient(160deg,#5E7466,#7D9586);
+  background:linear-gradient(160deg,#667A6A,#879D8B);
 }
 
 .bg-light{
-  background:linear-gradient(160deg,#E9E2D6,#DCCEBB);
+  background:linear-gradient(160deg,#ECE3D7,#DDD0BE);
 }
 
 .article-image span{
@@ -443,21 +442,88 @@ nav a:hover::after{
   font-size:58px;
   font-weight:300;
   line-height:1.1;
-  margin-bottom:28px;
+  margin-bottom:34px;
+}
+
+.about h2 em{
+  font-style:italic;
 }
 
 .about p{
-  color:rgba(255,255,255,.65);
+  color:rgba(255,255,255,.68);
   line-height:2;
   font-size:16px;
-  max-width:700px;
+  max-width:760px;
   margin:auto;
+}
+
+/* NEWSLETTER */
+
+.newsletter{
+  padding:110px 48px;
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+
+.newsletter-left span{
+  font-size:10px;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--lotus);
+}
+
+.newsletter-left h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:56px;
+  line-height:1.05;
+  font-weight:300;
+  margin:24px 0;
+}
+
+.newsletter-left h3 em{
+  font-style:italic;
+}
+
+.newsletter-left p{
+  color:var(--stone);
+  line-height:1.9;
+}
+
+.newsletter-form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.newsletter-form input{
+  border:none;
+  border-bottom:1px solid var(--mist);
+  background:transparent;
+  padding:16px 0;
+  font-family:'Jost',sans-serif;
+  outline:none;
+}
+
+.newsletter-form button{
+  margin-top:10px;
+  background:var(--forest);
+  color:white;
+  border:none;
+  padding:18px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  font-size:11px;
+  cursor:pointer;
 }
 
 /* FOOTER */
 
 footer{
-  background:#16231C;
+  background:#161F19;
   padding:50px 48px;
 }
 
@@ -528,6 +594,11 @@ footer{
   padding:80px 24px;
 }
 
+.newsletter{
+  grid-template-columns:1fr;
+  padding:70px 24px;
+}
+
 }
 
 </style>
@@ -538,9 +609,9 @@ footer{
 <!-- TOP STRIP -->
 
 <div class="top-strip">
-  <div class="strip-inner">
-    Bienvenida a LOTUS · Celebrity Wellness · Dietas de famosos · Entrevistas con especialistas · Cultura wellness contemporánea · Desde Ciudad de México · Bienvenida a LOTUS · Celebrity Wellness · Dietas de famosos · Entrevistas con especialistas · Cultura wellness contemporánea · Desde Ciudad de México
-  </div>
+<div class="strip-inner">
+Bienvenida a Es Tan Fresh · Celebrity Wellness · Dietas virales · Entrevistas con especialistas · Recetas · Cultura wellness · Desde Ciudad de México · Bienvenida a Es Tan Fresh · Celebrity Wellness · Dietas virales · Entrevistas con especialistas · Recetas · Cultura wellness
+</div>
 </div>
 
 <!-- HEADER -->
@@ -554,7 +625,7 @@ Edición — Mayo 2026
 </div>
 
 <div class="logo">
-<span class="logo-main">LOTUS</span>
+<span class="logo-main">Es Tan Fresh</span>
 <span class="logo-tagline">
 Wellness · Cultura · Nutrición
 </span>
@@ -562,7 +633,7 @@ Wellness · Cultura · Nutrición
 
 <div class="header-right">
 <a href="#" class="header-btn">
-Suscribirse
+Newsletter
 </a>
 </div>
 
@@ -594,17 +665,13 @@ Suscribirse
 
 <div class="hero-logo">
 
-<svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 400 400" fill="none">
 
 <path d="M200 290C200 290 150 240 150 180C150 130 180 90 200 70C220 90 250 130 250 180C250 240 200 290 200 290Z" stroke="white" stroke-width="2"/>
 
 <path d="M200 290C200 290 95 250 85 185C78 140 105 110 135 100C170 90 195 120 200 145" stroke="white" stroke-width="1.5"/>
 
 <path d="M200 290C200 290 305 250 315 185C322 140 295 110 265 100C230 90 205 120 200 145" stroke="white" stroke-width="1.5"/>
-
-<path d="M200 305C200 305 130 285 105 255C85 232 90 205 118 195C145 185 182 205 200 230" stroke="white" stroke-width="1.2"/>
-
-<path d="M200 305C200 305 270 285 295 255C315 232 310 205 282 195C255 185 218 205 200 230" stroke="white" stroke-width="1.2"/>
 
 </svg>
 
@@ -614,7 +681,7 @@ Suscribirse
 <span>Celebrity Wellness · Mayo 2026</span>
 
 <p>
-“La cultura wellness moderna ya no trata solo de verse bien. Trata de cómo vivimos, comemos y nos sentimos.”
+“Las tendencias wellness cambian todo el tiempo. Lo importante es entender cuáles realmente valen la pena.”
 </p>
 
 </div>
@@ -628,13 +695,13 @@ Vol. 01 — Editorial Digital
 </div>
 
 <h1 class="hero-title">
-Dietas de celebridades,<br>
-entrevistas y la nueva<br>
-<em>cultura wellness</em>
+Celebrity wellness,<br>
+nutrición y cultura<br>
+<em>contemporánea</em>
 </h1>
 
 <p class="hero-body">
-Una revista digital sobre nutrición, hábitos y bienestar contemporáneo. Analizamos lo que comen las celebridades, hablamos con expertos y exploramos las tendencias que están redefiniendo el wellness moderno.
+Dietas de celebridades, entrevistas con especialistas, recetas y tendencias wellness explicadas desde una mirada estética, curiosa y honesta.
 </p>
 
 <a href="#" class="hero-btn">
@@ -653,11 +720,11 @@ Explorar artículos
 <div class="section-header">
 
 <div class="section-label">
-Celebrity Wellness
+Lo más reciente
 </div>
 
 <h2 class="section-title">
-Dietas, hábitos y <em>rituales modernos</em>
+Lo que está pasando en el <em>wellness moderno</em>
 </h2>
 
 <div class="section-line"></div>
@@ -665,8 +732,6 @@ Dietas, hábitos y <em>rituales modernos</em>
 </div>
 
 <div class="articles">
-
-<!-- FEATURED -->
 
 <div class="article article-featured">
 
@@ -677,15 +742,15 @@ Dietas, hábitos y <em>rituales modernos</em>
 <div class="article-body">
 
 <div class="article-category">
-Dietas de celebridades
+Celebrity Wellness
 </div>
 
 <h3 class="article-title">
-Qué come Selena Gomez en un día — y lo que realmente dicen los expertos
+Qué come Selena Gomez en un día y qué opinan los especialistas
 </h3>
 
 <p class="article-text">
-Analizamos entrevistas, hábitos y rutinas alimentarias junto a especialistas en nutrición y wellness contemporáneo.
+Analizamos entrevistas, hábitos y rutinas alimentarias junto a expertos en nutrición y wellness contemporáneo.
 </p>
 
 <a href="#" class="article-link">
@@ -695,8 +760,6 @@ Leer artículo
 </div>
 
 </div>
-
-<!-- ARTICLE -->
 
 <div class="article">
 
@@ -711,7 +774,7 @@ Entrevistas
 </div>
 
 <h3 class="article-title">
-Nutriólogos hablan sobre la obsesión actual con la proteína
+Nutriólogos hablan sobre la obsesión con la proteína
 </h3>
 
 <a href="#" class="article-link">
@@ -721,8 +784,6 @@ Leer más
 </div>
 
 </div>
-
-<!-- ARTICLE -->
 
 <div class="article">
 
@@ -748,8 +809,6 @@ Leer más
 
 </div>
 
-<!-- ARTICLE -->
-
 <div class="article">
 
 <div class="article-image bg-light">
@@ -774,8 +833,6 @@ Leer más
 
 </div>
 
-<!-- ARTICLE -->
-
 <div class="article">
 
 <div class="article-image bg-sage">
@@ -789,7 +846,7 @@ Cultura
 </div>
 
 <h3 class="article-title">
-Por qué el wellness se convirtió en una estética digital
+Por qué el wellness se volvió una estética de internet
 </h3>
 
 <a href="#" class="article-link">
@@ -815,13 +872,71 @@ Sobre Nosotros
 </div>
 
 <h2>
-Una mirada editorial<br>
-al wellness moderno
+Wellness, cultura<br>
+y una mirada más<br>
+<em>real</em>
 </h2>
 
 <p>
-LOTUS es una revista digital enfocada en celebrity wellness, nutrición contemporánea y cultura del bienestar. Exploramos dietas de celebridades, entrevistamos especialistas y analizamos cómo internet, la estética y los hábitos están redefiniendo la manera en que vivimos y nos alimentamos.
+<strong>Es Tan Fresh</strong> es un espacio editorial sobre wellness,
+nutrición y cultura contemporánea. Hablamos de hábitos, comida,
+celebridades, estética y bienestar desde una mirada curiosa,
+honesta y visualmente inspiradora.
 </p>
+
+<br><br>
+
+<p>
+Exploramos lo que realmente hay detrás de las dietas virales,
+entrevistamos especialistas y analizamos las tendencias que están
+redefiniendo la forma en la que vivimos, nos alimentamos y nos cuidamos.
+</p>
+
+<br><br>
+
+<p>
+Entre recetas, rituales, conversaciones y celebrity wellness,
+buscamos crear un espacio donde sentirse bien no tenga que verse perfecto.
+</p>
+
+<br><br>
+
+<p>
+Porque el bienestar no debería sentirse imposible, rígido ni exclusivo.
+Debería sentirse humano, interesante y, sobre todo, auténtico.
+</p>
+
+</div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter">
+
+<div class="newsletter-left">
+
+<span>Newsletter</span>
+
+<h3>
+El wellness que sí<br>
+quieres leer <em>online</em>
+</h3>
+
+<p>
+Cada semana compartimos artículos, tendencias, entrevistas y conversaciones sobre nutrición, celebrity wellness y cultura contemporánea.
+</p>
+
+</div>
+
+<div class="newsletter-form">
+
+<input type="text" placeholder="Tu nombre">
+<input type="email" placeholder="tucorreo@ejemplo.com">
+
+<button>
+Unirme
+</button>
 
 </div>
 
@@ -834,7 +949,7 @@ LOTUS es una revista digital enfocada en celebrity wellness, nutrición contempo
 <div class="footer-inner">
 
 <div class="footer-copy">
-© 2026 LOTUS — Ciudad de México
+© 2026 Es Tan Fresh — Ciudad de México
 </div>
 
 <div class="footer-social">
