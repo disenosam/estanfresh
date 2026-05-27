@@ -196,9 +196,15 @@ nav a:hover::after{
 .hero-overlay{
   position:absolute;
   inset:0;
+
   background:
-  radial-gradient(circle at top left, rgba(255,255,255,.06), transparent 40%),
-  radial-gradient(circle at bottom right, rgba(214,143,160,.14), transparent 40%);
+  linear-gradient(
+    to top,
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.15)
+  );
+
+  z-index:1;
 }
 
 .hero-logo{
@@ -221,21 +227,18 @@ nav a:hover::after{
 }
 
 .hero-caption span{
-  display:block;
-  color:var(--mist);
-  font-size:10px;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  margin-bottom:16px;
+  display:inline-block;
+  background:rgba(255,192,203,.75);
+  padding:6px 10px;
+  color:white;
 }
 
 .hero-caption p{
-  max-width:320px;
-  color:rgba(255,255,255,.75);
-  line-height:1.9;
-  font-family:'Cormorant Garamond',serif;
-  font-size:19px;
-  font-style:italic;
+  background:rgba(255,192,203,.72);
+  display:inline;
+  padding:8px 12px;
+  line-height:2.1;
+  color:white;
 }
 
 .hero-right{
